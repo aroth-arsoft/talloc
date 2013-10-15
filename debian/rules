@@ -46,6 +46,7 @@ override_dh_auto_clean:
 	rm -f buildtools/wafsamba/*.pyc \
 		buildtools/wafadmin/*.pyc \
 		buildtools/wafadmin/Tools/*.pyc
+	[ -f libtalloc.a ] && rm libtalloc.a
 
 override_dh_auto_install:
 	mkdir -p $(DESTDIR)`swig -swiglib`
